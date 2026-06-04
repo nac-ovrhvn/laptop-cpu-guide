@@ -60,19 +60,19 @@ const INTEL_FAMILIES = ["Core i3","Core i5","Core i7","Core i9","Core Ultra"];
 const AMD_FAMILIES   = ["Ryzen 3","Ryzen 5","Ryzen 7","Ryzen 9","Ryzen AI"];
 
 const NAMING_INTEL = [
-  { code:"i3 / i5 / i7 / i9",       meaning:"Tier — but old i7 can lose to new i5. Generation matters more." },
+  { code:"i3 / i5 / i7 / i9",       meaning:"Tier, although old i7 can lose to new i5. Generation matters more." },
   { code:"13th / 14th Gen",          meaning:"14th is a minor refresh of 13th. Not a significant jump." },
   { code:"U suffix",                 meaning:"Ultra-low power 15–28W. Thin laptops. Better battery, slower." },
   { code:"H suffix",                 meaning:"High performance 35–45W. Significantly faster. Heavier laptops." },
   { code:"HX suffix",                meaning:"Extreme 55–115W. Desktop-class. Only in 2 kg+ machines." },
   { code:"P suffix",                 meaning:"Performance 28W. Between U and H. Common in business laptops." },
-  { code:"N suffix",                 meaning:"Budget Atom-class. Very slow. Sub-₹35k laptops only." },
+  { code:"N suffix",                 meaning:"Budget Atom-class. Very slow." },
   { code:"Core Ultra Series 1",      meaning:"2024 rebrand. Ultra 5/7/9 = i5/i7/i9 tier. Adds Arc iGPU + NPU." },
-  { code:"V suffix (Series 2)",      meaning:"Lunar Lake. Very efficient. RAM soldered onto chip — not upgradeable." },
+  { code:"V suffix (Series 2)",      meaning:"'Lunar Lake' - Very efficient. RAM is soldered onto chip and not upgradeable." },
   { code:"i7-1355U vs i5-13500H",    meaning:"i7-U loses to i5-H in real tasks. Suffix beats tier number." },
 ];
 const NAMING_AMD = [
-  { code:"Ryzen 3 / 5 / 7 / 9",     meaning:"Tier. Same caveat — generation and suffix matter more." },
+  { code:"Ryzen 3 / 5 / 7 / 9",     meaning:"Tier, generation and suffix matter more." },
   { code:"7xxx / 8xxx series",       meaning:"7000 = 2022/23. 8000 = 2023/24. But not all 7000 chips are Zen 4." },
   { code:"U suffix",                 meaning:"Ultra-low power 15–28W. Thin laptops." },
   { code:"HS suffix",                meaning:"High performance slim 35–45W. Best balance." },
@@ -459,7 +459,7 @@ export default function App() {
 
       {/* Header */}
       <header className="header">
-        <div className="header-logo">CPU Guide <span>/ Laptops</span></div>
+        <div className="header-logo">CPUspec <span>/ Laptops</span></div>
         <button className={`tab ${tab==="intel"?"active-intel":""}`} onClick={()=>setTab("intel")}>Intel</button>
         <button className={`tab ${tab==="amd"?"active-amd":""}`}     onClick={()=>setTab("amd")}>AMD</button>
         <button className={`tab ${tab==="naming"?"active":""}`}       onClick={()=>setTab("naming")}>Naming Guide</button>
