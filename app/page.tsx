@@ -463,6 +463,15 @@ export default function App() {
         <button className={`tab ${tab==="intel"?"active-intel":""}`} onClick={()=>setTab("intel")}>Intel</button>
         <button className={`tab ${tab==="amd"?"active-amd":""}`}     onClick={()=>setTab("amd")}>AMD</button>
         <button className={`tab ${tab==="naming"?"active":""}`}       onClick={()=>setTab("naming")}>Naming Guide</button>
+
+         <a
+       href="https://github.com/nac-ovrhvn/cpu-spec/"
+       target="_blank"
+       rel="noopener noreferrer"
+       className="tab"
+         >
+    GitHub
+     </a>
         {compare.length>0 && (
           <button className="compare-badge" onClick={()=>setTab("compare")}>
             Compare · {compare.length}
